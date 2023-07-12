@@ -21,6 +21,19 @@ public class EnemyAI : MonoBehaviour
     {
         // Get rigidbody component
         rigidbody = GetComponent<Rigidbody>();
+
+        rigidbody.height = height;
+        rigidbody.maxSpeed = maxSpeed;
+        rigidbody.acceleration = acceleration;
+
+    }
+
+    void Update()
+    {
+        if (rigidbody != null)
+        {
+            float currentSpeed = rigidbody.velocity.magnitude;
+        }
     }
 
     
