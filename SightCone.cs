@@ -17,13 +17,13 @@ public class SightCone : MonoBehaviour
     {
         // Draw the sight cone in the editor for debugging purposes
         Gizmos.color = Color.yellow;
-        Vector3 direction = transform.forward;
-        Gizmos.DrawRay(transform.position, direction * distance);
+        Vector3 direction = -transform.forward;
+        Gizmos.DrawRay(transform.position, direction / distance);
 
         // Draw the arc at the end of the sight cone
-        Vector3 right = Quaternion.AngleAxis(angle / 2, Vector3.up) * direction;
+        Vector3 right = Quaternion.AngleAxis(angle / 8, Vector3.up) * direction;
         Vector3 left = Quaternion.AngleAxis(-angle / 2, Vector3.up) * direction;
-        Gizmos.DrawRay(transform.position + direction * distance, right * distance);
+        Gizmos.DrawRay(-transform.position + direction * distance, right * distance);
         Gizmos.DrawRay(transform.position + direction * distance, left * distance);
     }
 }
