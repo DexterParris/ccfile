@@ -11,20 +11,7 @@ public class SightCone : MonoBehaviour
     // The layer mask to use for the sight cone
     public LayerMask layerMask;
 
-    void Update()
-    {
-        // Get the direction that the sight cone should face
-        Vector3 direction = transform.forward;
 
-        // Perform a raycast to check for objects in the sight cone
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position, direction, out hit, distance, layerMask))
-        {
-            // The sight cone hit something, so do something here
-            // You can access the object that was hit using the hit.collider property
-            Debug.Log("Sight cone hit " + hit.collider.gameObject.name);
-        }
-    }
 
     private void OnDrawGizmos()
     {
