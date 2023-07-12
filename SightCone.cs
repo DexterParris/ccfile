@@ -35,7 +35,7 @@ public class SightCone : MonoBehaviour
         // Draw the sight cone in the editor for debugging purposes
         Gizmos.color = Color.green;
         Vector3 direction = -transform.forward;
-        Gizmos.DrawRay(transform.position, direction / distance);
+        Gizmos.DrawRay(-transform.position, direction * distance + 3);
 
         // Draw the arc at the end of the sight cone
         Vector3 right = Quaternion.AngleAxis(angle / 8, Vector3.down) * direction;

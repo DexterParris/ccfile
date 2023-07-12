@@ -12,7 +12,7 @@ public class EnemyAI : MonoBehaviour
     public float acceleration = 5.0f;
 
     // Height of enemy above ground
-    public float height = 1.0f;
+    public float height = 10.0f;
 
     // Rigidbody component of enemy
     private Rigidbody rigidbody;
@@ -24,7 +24,7 @@ public class EnemyAI : MonoBehaviour
 
         rigidbody.height = height;
         rigidbody.maxSpeed = maxSpeed;
-        rigidbody.acceleration = acceleration;
+        rigidbody.acceleration = acceleration - 10f;
 
     }
 

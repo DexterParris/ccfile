@@ -1,0 +1,4 @@
+test file containing usernames + passwords:
+
+johnplayer, 1937nasf
+sallyhampstead, 2983habssASG
