@@ -33,4 +33,18 @@ public class atob : MonoBehaviour
             objectB.GetComponent<Rigidbody>().drag = 0;
         }
     }
+
+    void CalculateDistanceFromOrigin(GameObject targetObject)
+    {
+        // Get the current position, rotation, and scale of the target object
+        Vector3 position = targetObject.transform.position;
+        Quaternion rotation = targetObject.transform.rotation;
+        Vector3 scale = targetObject.transform.localScale;
+
+        // Calculate the distance from the origin (0,0,0)
+        float distance = Vector3.Distance(position, Vector3.zero);
+
+        // Log the results
+        Debug.Log("Distance from origin: " + distance);
+    }
 }
